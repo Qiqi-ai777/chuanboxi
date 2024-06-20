@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Untitled-2.css">
+</head>
+<body>
+    <div class="zy">
+        <div class="top">
+            <div class="logo">
+                <img src="image/dc9d6ca77ef73ab6f260d8e368bb00f.jpg">
+            </div>
+            <input type="text" name="" class="srk">
+        </div>
+        <div class="nav">
+            <div>首页</div>
+            <div>专业概览</div>
+            <div>教学信息</div>
+            <div>学生天地</div>
+            <div>招生就业</div>
+        </div>
+        <div class="carousel">
+            <img src="image/47c4426edfbdb8232e94c4f5fe708a1.jpg" class="active" id="img1">
+            <img src="image/47c4426edfbdb8232e94c4f5fe708a1.jpg"  class="inactive" id="img2">
+            <img src="image/47c4426edfbdb8232e94c4f5fe708a1.jpg"   class="inactive" id="img3">
+        </div>
+        <div class="center1">
+            <div class="center1_box">通知公告
+            </div>
+            <div class="center1_box">学院动态
+            </div>
+            <div class="center1_box">下载中心
+            </div>
+        </div>
+        <div class="center2">
+            <div class="center2_box1">学工咨询
+            </div>
+            <div style="margin-top: 10px;" class="center2_box1">联系我们
+            </div>
+            <div class="center2_box2"></div>
+        </div>
+        <div class="center3">
+            <div class="center3_box">
+                <img src="image/1990accb5a4bdf0f9b4ec9fb51e5e6f.jpg">
+            </div>
+            <div class="center3_box">
+                <img src="image/ce80f7a2a54c0a5c51abc5b48594f5b.jpg">
+            </div>
+            <div class="center3_box">
+                <img src="image/d7a02edfc025734ed88b561666dadfa.jpg">
+            </div>
+            <div class="center3_box">
+                <img src="image/0a37ba1b87183f4890a0651a7b41774.jpg">
+            </div>
+        </div>
+        <div class="center4">
+            <div class="center4_box1">友情链接
+            </div>
+            <div class="center4_box2"></div>
+        </div>
+    </div>
+</body>
+<script>
+     const images = document.querySelectorAll('.carousel img');
+    let currentIndex = 0;
+
+    function changeSlide() {
+      images[currentIndex].classList.remove('active');
+      images[currentIndex].classList.add('inactive');
+
+      currentIndex = (currentIndex + 1) % images.length;
+
+      images[currentIndex].classList.remove('inactive');
+      images[currentIndex].classList.add('active');
+    }
+
+    setInterval(changeSlide, 3000);
+</script>
+</html>
